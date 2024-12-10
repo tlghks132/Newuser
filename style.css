@@ -1,0 +1,170 @@
+
+/* 배경 스타일 */
+body {
+    font-family: 'Noto Sans KR', Arial, sans-serif;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.1),    /* 빨강 */
+        rgba(255, 165, 0, 0.1), /* 주황 */
+        rgba(255, 255, 0, 0.1), /* 노랑 */
+        rgba(0, 128, 0, 0.1),   /* 초록 */
+        rgba(0, 0, 255, 0.1),   /* 파랑 */
+        rgba(75, 0, 130, 0.1),  /* 남색 */
+        rgba(238, 130, 238, 0.1) /* 보라 */
+    ); /* 무지개 색상 그라데이션 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+
+.signup-container {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #6a11cb;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.2);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px 15px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 아이디 입력칸과 중복 확인 버튼 정렬 */
+.userid-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 입력칸과 버튼 간격 */
+    margin-bottom: 20px;
+}
+
+.userid-container input {
+    flex: 3;
+    height: 44px;
+    padding: 0 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.userid-container button {
+    flex: 1;
+    height: 44px;
+    background: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.userid-container button:hover {
+    background: #6a11cb;
+    transform: translateY(-1px);
+}
+
+/* 에러 메시지 */
+#error-message {
+    font-size: 14px;
+    margin: -10px 0 20px;
+    color: red;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .signup-container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+
+    .userid-container {
+        flex-direction: column; /* 아이디 입력칸과 버튼 세로 정렬 */
+    }
+
+    .userid-container input, .userid-container button {
+        width: 100%; /* 입력칸과 버튼 100% 너비 */
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input, button {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
